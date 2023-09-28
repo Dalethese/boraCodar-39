@@ -1,0 +1,30 @@
+.button {
+  width: 314px;
+  padding: 16px 20px;
+  background-color: var(--brand-purple);
+  border: none;
+  border-radius: 8px;
+  color: var(--base-gray-100);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  cursor: pointer;
+  transition: 0.2s;
+}
+.button:hover {
+  background-color: var(--brand-purple-dark);
+}
+.button:disabled {
+  opacity: 0.5;
+}
+
+.label {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.button svg {
+  font-size: 18px;
+}
