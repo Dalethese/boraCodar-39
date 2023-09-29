@@ -1,13 +1,12 @@
-import { Button } from './components/Button'
-import './App.css'
+import "./App.css";
+import { TextArea } from "./components/TextArea";
 
 function App() {
-
   return (
     <>
-      <Button label='Enviar' />
+      <TextArea />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
