@@ -1,18 +1,20 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  --webkit-font-smoothing: antialiased;
-  --moz-osx-font-smoothing: grayscale;
-  font-family: "Inter", sans-serif;
+.heading {
+  font-size: 20px;
+  line-height: 130%;
+  font-weight: bold;
 }
-
-html,
-body {
-  width: 100vw;
-  height: 100vh;
+.bodyBold {
+  font-size: 16px;
+  line-height: 150%;
+  font-weight: bold;
 }
-
-body {
-  background: var(--brand-gradient-dark);
+.body {
+  font-size: 16px;
+  line-height: 150%;
+  font-weight: normal;
+}
+.span {
+  font-size: 12px;
+  line-height: 150%;
+  font-weight: normal;
 }

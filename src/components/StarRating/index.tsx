@@ -1,4 +1,4 @@
-import useRating from "../hooks/useRating";
+import useRating from "../../hooks/useRating";
 import { Star } from "../Star";
 import styles from "./style.module.css";
 
@@ -14,7 +14,9 @@ export const StarRating = () => {
           <Star
             key={index}
             currentRating={currentRating}
-            onClick={() => dispatch({ type: "set_rating", number: currentRating })}
+            onClick={() =>
+              dispatch({ type: "set_rating", number: currentRating })
+            }
           />
         );
       })}

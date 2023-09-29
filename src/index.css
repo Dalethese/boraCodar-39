@@ -1,3 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --webkit-font-smoothing: antialiased;
+  --moz-osx-font-smoothing: grayscale;
+  font-family: "Inter", sans-serif;
+}
+
 :root {
   --brand-purple: #685ed9;
   --brand-purple-dark: #4439c7;
@@ -14,4 +23,16 @@
   --rating-yellow: #f5b44d;
   --rating-yellow-dark: #d5983e;
   --rating-gradient-yellow: linear-gradient(to right, #f9d399, #d4983e);
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  background: var(--brand-gradient-dark);
+  display: grid;
+  place-content: center;
 }

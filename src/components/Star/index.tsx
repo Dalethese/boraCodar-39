@@ -1,4 +1,4 @@
-import useRating from "../hooks/useRating";
+import useRating from "../../hooks/useRating";
 import { PiStarFill } from "react-icons/pi";
 import styles from "./style.module.css";
 
@@ -11,17 +11,19 @@ export const Star = ({ onClick, currentRating }: props) => {
   const [{ hover, rating }, dispatch] = useRating();
 
   return (
-    <label>
+    <label className={styles.label}>
       <input type="radio" name="rating" value={rating} onClick={onClick} />
       <PiStarFill
         className={styles.star}
-        size={40}
+        // size={32}
         color={
           currentRating <= (hover || rating)
             ? "var(--rating-yellow)"
             : "var(--base-gray-200)"
         }
-        onMouseEnter={() => dispatch({ type: "set_hover", value: currentRating })}
+        onMouseEnter={() =>
+          dispatch({ type: "set_hover", value: currentRating })
+        }
         onMouseLeave={() => dispatch({ type: "set_hover", value: 0 })}
       />
     </label>
