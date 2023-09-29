@@ -1,10 +1,10 @@
 import "./App.css";
-import { TextArea } from "./components/TextArea";
+import { StarRating } from "./components/StarRating";
 
 function App() {
   return (
     <>
-      <TextArea />
+      <StarRating />
     </>
   );
 }
