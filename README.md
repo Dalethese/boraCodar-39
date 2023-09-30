@@ -2,6 +2,8 @@
 
 ![printScreen](./public/printscreen.png)
 
+[Veja o projeto rodando](https://bora-codar-39-two.vercel.app/)
+
 ## Tecnologias
 
 - ReactJs
