@@ -2,6 +2,7 @@ import useRating from "../../hooks/useRating";
 import { PiArrowLeft } from "react-icons/pi";
 import { Review } from "./Review";
 import styles from "./styles.module.css";
+import { Feedback } from "./Feedback";
 
 // interface props {}
 
@@ -18,11 +19,15 @@ export const Card = () => {
           <PiArrowLeft />
         </button>
       )}
+
       <div className={styles.product}>
         <img src="/smartwatch.png" alt="smartwatch" />
       </div>
 
-      <div className={styles.content}>{stage === "rating" && <Review />}</div>
+      <div className={styles.content}>
+        {stage === "rating" && <Review />}
+        {stage === "feedback" && <Feedback />}
+      </div>
     </div>
   );
 };

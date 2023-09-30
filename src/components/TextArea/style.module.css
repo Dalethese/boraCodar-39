@@ -3,10 +3,13 @@
   height: 96px;
   padding: 12px;
   background-color: var(--base-gray-200);
+  border: none;
+  outline: none;
   border-radius: 8px;
 
   color: var(--base-gray-500);
   font-size: 16px;
+  resize: none;
 }
 
 .textArea::placeholder {

@@ -3,7 +3,7 @@ import styles from "./styles.module.css";
 
 interface props {
   label: string;
-  onClick: () => void;
+  onClick?: () => void;
 }
 
 export const Button = ({ label, onClick }: props) => {
