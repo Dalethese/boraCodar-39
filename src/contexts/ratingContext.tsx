@@ -5,6 +5,7 @@ const initialState: State = {
   rating: 0,
   hover: 0,
   stage: "rating",
+  comment: "",
 };
 
 const ratingReducer = (state: State, action: Action) => {
@@ -39,6 +40,11 @@ const ratingReducer = (state: State, action: Action) => {
           stage: "rating",
         };
       }
+    case "set_comment":
+      return {
+        ...state,
+        comment: action.comment,
+      };
     default:
       return state;
   }

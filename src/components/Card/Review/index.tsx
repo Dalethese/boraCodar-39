@@ -4,7 +4,7 @@ import { StarRating } from "../../StarRating";
 import styles from "./styles.module.css";
 
 export const Review = () => {
-  const [, dispatch] = useRating();
+  const [{ rating }, dispatch] = useRating();
 
   return (
     <div className={styles.review}>
@@ -32,6 +32,7 @@ export const Review = () => {
       <Button
         label="Continuar"
         onClick={() => dispatch({ type: "change_stage" })}
+        disabled={rating <= 0 ? true : false}
       />
     </div>
   );
