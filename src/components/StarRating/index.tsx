@@ -7,7 +7,7 @@ export const StarRating = () => {
 
   return (
     <div className={styles.container}>
-      {[...Array(5)].map((star, index) => {
+      {[...Array(5)].map((_star, index) => {
         const currentRating = index + 1;
 
         return (
