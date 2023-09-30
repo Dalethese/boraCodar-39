@@ -20,9 +20,7 @@ export const Feedback = () => {
         }
       />
 
-      <p>{comment}</p>
-
-      <Button label="Enviar" onClick={() => console.log("enviou")} />
+      <Button label="Enviar" onClick={() => dispatch({ type: "send" })} />
     </div>
   );
 };

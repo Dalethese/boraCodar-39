@@ -1,11 +1,13 @@
 import { Dispatch, ReactNode, createContext, useReducer } from "react";
 import { Action, State } from "./types";
+import { STAGES } from "../constants/stages";
 
 const initialState: State = {
   rating: 0,
   hover: 0,
-  stage: "rating",
+  stage: STAGES.rating,
   comment: "",
+  closeCard: false,
 };
 
 const ratingReducer = (state: State, action: Action) => {
@@ -32,18 +34,28 @@ const ratingReducer = (state: State, action: Action) => {
       if (state.stage === "rating") {
         return {
           ...state,
-          stage: "feedback",
+          stage: STAGES.feedback,
         };
       } else {
         return {
           ...state,
-          stage: "rating",
+          stage: STAGES.rating,
         };
       }
     case "set_comment":
       return {
         ...state,
         comment: action.comment,
+      };
+    case "send":
+      return {
+        ...state,
+        stage: STAGES.thanks,
+      };
+    case "close_card":
+      return {
+        ...state,
+        closeCard: true,
       };
     default:
       return state;

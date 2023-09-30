@@ -1,16 +1,17 @@
 import useRating from "../../hooks/useRating";
 import { PiArrowLeft } from "react-icons/pi";
-import { Review } from "./Review";
-import styles from "./styles.module.css";
-import { Feedback } from "./Feedback";
 
-// interface props {}
+import { Review } from "./Review";
+import { Feedback } from "./Feedback";
+import { Thanks } from "./Thanks";
+
+import styles from "./styles.module.css";
 
 export const Card = () => {
-  const [{ stage }, dispatch] = useRating();
+  const [{ stage, closeCard }, dispatch] = useRating();
 
   return (
-    <div className={styles.card}>
+    <div className={`${styles.card} ${closeCard ? styles.closeAnimation : ""}`}>
       {stage === "feedback" && (
         <button
           className={styles.backBtn}
@@ -27,6 +28,7 @@ export const Card = () => {
       <div className={styles.content}>
         {stage === "rating" && <Review />}
         {stage === "feedback" && <Feedback />}
+        {stage === "thanks" && <Thanks />}
       </div>
     </div>
   );
